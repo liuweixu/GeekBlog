@@ -36,6 +36,7 @@ import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
@@ -69,8 +70,8 @@ public class UserAuthServiceImpl extends ServiceImpl<UserAuthDao, UserAuth> impl
     private BlogInfoService blogInfoService;
     @Autowired
     private RabbitTemplate rabbitTemplate;
-//    @Autowired
-//    private KafkaTemplate kafkaTemplate;
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
     @Autowired
     private SocialLoginStrategyContext socialLoginStrategyContext;
 
@@ -88,12 +89,12 @@ public class UserAuthServiceImpl extends ServiceImpl<UserAuthDao, UserAuth> impl
                 .subject("验证码")
                 .content("您的验证码为 " + code + " 有效期15分钟，请不要告诉他人哦！")
                 .build();
-        rabbitTemplate.convertAndSend(MQPrefixConst.EMAIL_EXCHANGE, "*", new Message(JSON.toJSONBytes(emailDTO), new MessageProperties()));
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("email", emailDTO.getEmail());
-//        map.put("subject", emailDTO.getSubject());
-//        map.put("content", emailDTO.getContent());
-//        kafkaTemplate.send(MQPrefixConst.EMAIL_KAFKA_TOPIC, JSON.toJSONString(map));
+//        rabbitTemplate.convertAndSend(MQPrefixConst.EMAIL_EXCHANGE, "*", new Message(JSON.toJSONBytes(emailDTO), new MessageProperties()));
+        Map<String, Object> map = new HashMap<>();
+        map.put("email", emailDTO.getEmail());
+        map.put("subject", emailDTO.getSubject());
+        map.put("content", emailDTO.getContent());
+        kafkaTemplate.send(MQPrefixConst.EMAIL_KAFKA_TOPIC, JSON.toJSONString(map));
         // 将验证码存入redis，设置过期时间为15分钟
         redisService.set(RedisPrefixConst.USER_CODE_KEY + username, code, RedisPrefixConst.CODE_EXPIRE_TIME);
     }

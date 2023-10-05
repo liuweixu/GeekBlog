@@ -29,7 +29,7 @@
 
 # 技术栈
 
-- 后端：SpringBoot、Spring Security、Swagger2、MyBatis-Plus、MySQL、Redis、ElasticSearch、RabbitMQ（Kafka）、腾讯云Cos
+- 后端：SpringBoot、Spring Security、Swagger2、MyBatis-Plus、MySQL、Redis、ElasticSearch、Kafka、腾讯云Cos
 - 前端：Vue + Vuetify + Vuex + Vue-router + Axios + Element + Echarts
 - 运维：Docker、Nginx
 
@@ -53,13 +53,13 @@
 
 ## 本地运行
 
-1. 推荐使用 Docker 部署开发，十分方便，需要部署 MySQL、Redis 和 RabbitMQ 这三个，如果有意深化开发，还可以安装Kafka（要先安装 zookeeper ）、Elastic Search 等，均可以拉取最新版本。
+1. 推荐使用 Docker 部署开发，十分方便，需要部署 MySQL、Redis 、Kafka 和 zookeeper 这三个，如果有意深化开发，还可以安装 Elastic Search 等，均可以拉取最新版本，如果服务器配置不够，可以放弃拉取 Kafka，改用 RabbitMQ。
 
 2. SQL 文件见 Datasets 文件夹内，请先建立 PersonalBlog 数据库，然后在这个数据库内运行该SQL文件。
 
 3. 需要修改配置信息，即要修改 blog-springboot\src\main\resources\application-dev.yml 里面的信息，包括替换IP、添加OSS或COS的信息等。
-4. 要先启动后端，然后启动前端的admin，接着启动前端的blog，前端的启动方式是 1) npm install 2) npm run serve，必须在 admin 或 blog 的路径内。
-5. 项目启动后，使用 test@163.com 登录后台，必须先安装 npm（本地安装）。
+4. 要先启动后端，然后启动前端的admin，接着启动前端的blog（必须先安装 npm（本地安装）），前端的启动方式是 1) npm install 2) npm run serve，必须在 admin 或 blog 的路径内。
+5. 项目启动后，使用 test@163.com 登录后台。
 
 ## 服务器运行
 
@@ -105,7 +105,7 @@
 
 # 项目总结
 
-博客作为新手入门项目是十分不错的，项目所用的技术栈覆盖的也比较广，适合初学者学习，开发期间，我也参考了不少优质的开源项目，碰上了不少坑，请教了无数次，学习了不少内容，真的十分感谢大家。以及如果这个项目中有做的不好的地方请大家见谅，有问题的或者有好的建议可以私聊联系我，邮箱：liuweixu@163.com 。
+博客作为新手入门项目是十分不错的，项目所用的技术栈覆盖的也比较广，适合初学者学习，开发期间，我也参考了不少优质的开源项目，碰上了不少坑，请教了无数次，学习了不少内容，真的十分感谢大家。以及如果这个项目中有做的不好的地方请大家见谅，有问题的或者有好的建议可以直接 issue 或私聊联系我，邮箱：liuweixu@163.com 。
 
 鸣谢项目：
 

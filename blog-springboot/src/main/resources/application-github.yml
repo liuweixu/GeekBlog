@@ -9,9 +9,9 @@ server:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-#    type: com.alibaba.druid.pool.DruidDataSource
+    #    type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://你的IP:3307/PersonalBlog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    url: jdbc:mysql://你的IP:3306/PersonalBlog?serverTimezone=Asia/Shanghai&allowMultiQueries=true
     username: root
     password: *******
     hikari:
@@ -32,12 +32,12 @@ spring:
   # redis配置
   redis:
     host: 你的IP
-    port: 6380
+    port: 6379
     password: *******
   # mq配置
   rabbitmq:
     host: 你的IP
-    port: 5673
+    port: 5672
     username: guest
     password: guest
     listener:
@@ -48,18 +48,18 @@ spring:
           initial-interval: 3000 #重试间隔时间（单位毫秒）
 
   #Kafka配置
-#  application:
-#    name: blog
-#  kafka:
-#    bootstrap-servers: 你的IP:9092
-#    producer:
-#      retries: 10
-#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#      value-serializer: org.apache.kafka.common.serialization.StringSerializer
-#    consumer:
-#      group-id: ${spring.application.name}
-#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  application:
+    name: blog
+  kafka:
+    bootstrap-servers: 你的IP:9092
+    producer:
+      retries: 10
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: ${spring.application.name}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 
   # es配置 若搜索模式为mysql可删除
   #  elasticsearch:

@@ -12,7 +12,6 @@ import com.liublog.blog.dao.TalkDao;
 import com.liublog.blog.dao.UserInfoDao;
 import com.liublog.blog.dto.*;
 import com.liublog.blog.vo.*;
-import com.liublog.blog.dto.*;
 import com.liublog.blog.entity.Comment;
 import com.liublog.blog.dao.CommentDao;
 import com.liublog.blog.service.BlogInfoService;
@@ -22,13 +21,12 @@ import com.liublog.blog.service.RedisService;
 import com.liublog.blog.util.HTMLUtils;
 import com.liublog.blog.util.PageUtils;
 import com.liublog.blog.util.UserUtils;
-import com.liublog.blog.vo.*;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
@@ -60,8 +58,8 @@ public class CommentServiceImpl extends ServiceImpl<CommentDao, Comment> impleme
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-//    @Autowired
-//    private KafkaTemplate kafkaTemplate;
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
     @Autowired
     private BlogInfoService blogInfoService;
 
@@ -229,12 +227,12 @@ public class CommentServiceImpl extends ServiceImpl<CommentDao, Comment> impleme
                 emailDTO.setSubject("审核提醒");
                 emailDTO.setContent("您收到了一条新的回复，请前往后台管理页面审核");
             }
-            rabbitTemplate.convertAndSend(MQPrefixConst.EMAIL_EXCHANGE, "*", new Message(JSON.toJSONBytes(emailDTO), new MessageProperties()));
-//            Map<String, Object> map = new HashMap<>();
-//            map.put("email", emailDTO.getEmail());
-//            map.put("subject", emailDTO.getSubject());
-//            map.put("content", emailDTO.getContent());
-//            kafkaTemplate.send(MQPrefixConst.EMAIL_KAFKA_TOPIC, JSON.toJSONString(map));
+//            rabbitTemplate.convertAndSend(MQPrefixConst.EMAIL_EXCHANGE, "*", new Message(JSON.toJSONBytes(emailDTO), new MessageProperties()));
+            Map<String, Object> map = new HashMap<>();
+            map.put("email", emailDTO.getEmail());
+            map.put("subject", emailDTO.getSubject());
+            map.put("content", emailDTO.getContent());
+            kafkaTemplate.send(MQPrefixConst.EMAIL_KAFKA_TOPIC, JSON.toJSONString(map));
         }
     }
 
