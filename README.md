@@ -29,7 +29,7 @@
 
 # 技术栈
 
-- 后端：SpringBoot、Spring Security、Swagger2、MyBatis-Plus、MySQL、Redis、ElasticSearch、Kafka、腾讯云Cos
+- 后端：SpringBoot、Spring Security、Swagger2、MyBatis-Plus、MySQL、Redis、ElasticSearch、Kafka
 - 前端：Vue + Vuetify + Vuex + Vue-router + Axios + Element + Echarts
 - 运维：Docker、Nginx
 
@@ -37,7 +37,7 @@
 
 - 前后端分离部署，符合当下的需求，可以使用Docker部署，也可以使用宝塔面板部署。
 - 使用开源的 mavon editor 富文本编辑器，实现 markdown 的方式写博客。
-- 使用策略模式构建多重上传模式（OSS、COS和本地）和两种搜索模式（MYSQL 和 ES）。
+- 使用策略模式构建多重上传模式（OSS、COS、MINIO和本地）和两种搜索模式（MYSQL 和 ES）。
 - 引入消息队列模型，支持邮件异步通知方式。
 - 引入Canal，解决缓存一致性问题。
 - 支持动态权限修改，采用RBAC模型，前端菜单和后台权限实时更新。
