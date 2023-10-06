@@ -71,17 +71,17 @@
               v-html="article.articleContent"
               ref="article"
           />
-          <div class="article-fileAttach">
-            <div>
-              <span>文章附件：</span>
-              <div style="margin: 0 auto;text-align: center"
-                  v-for="item of article.fileVoAttachList"
-                  :key="item.url"
-              >
-                <a :href="item.url" target="_blank" > {{ item.name }} </a>
-              </div>
-            </div>
-          </div>
+<!--          <div class="article-fileAttach">-->
+<!--            <div>-->
+<!--              <span>文章附件：</span>-->
+<!--              <div style="margin: 0 auto;text-align: center"-->
+<!--                  v-for="item of article.fileVoAttachList"-->
+<!--                  :key="item.url"-->
+<!--              >-->
+<!--                <a :href="item.url" target="_blank" > {{ item.name }} </a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
 
           <!-- 版权声明 -->
           <div class="aritcle-copyright">

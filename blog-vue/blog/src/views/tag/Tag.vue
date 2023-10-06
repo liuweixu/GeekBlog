@@ -155,7 +155,7 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://api.oick.cn/random/api.php";
+      cover = "https://moe.anosu.top/img?sort=starry";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

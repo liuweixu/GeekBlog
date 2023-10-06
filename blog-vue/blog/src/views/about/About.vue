@@ -79,7 +79,7 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://api.yimian.xyz/img?type=moe&size=1920x1080";
+      cover = "https://api.asxe.vip/scenery.php";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

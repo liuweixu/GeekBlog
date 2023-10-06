@@ -197,18 +197,18 @@
         </el-form-item>
 
 
-      <el-form-item label="上传附件">
-          <el-upload
-              class="upload-file-attach"
-              action="/api/admin/articles/attach/"
-              multiple
-              :limit="3"
-            :on-change="handleChange"
-            :file-list="article.fileAttach">
-            <el-button size="small" type="primary">点击上传</el-button>
-<!--            <div slot="tip" class="el-upload__tip">建议文件不要超过200Mb哦！</div>-->
-          </el-upload>
-      </el-form-item>
+<!--      <el-form-item label="上传附件">-->
+<!--          <el-upload-->
+<!--              class="upload-file-attach"-->
+<!--              action="/api/admin/articles/attach/"-->
+<!--              multiple-->
+<!--              :limit="3"-->
+<!--            :on-change="handleChange"-->
+<!--            :file-list="article.fileAttach">-->
+<!--            <el-button size="small" type="primary">点击上传</el-button>-->
+<!--&lt;!&ndash;            <div slot="tip" class="el-upload__tip">建议文件不要超过200Mb哦！</div>&ndash;&gt;-->
+<!--          </el-upload>-->
+<!--      </el-form-item>-->
       </el-form>
       <div slot="footer">
         <el-button @click="addOrEdit = false">取 消</el-button>

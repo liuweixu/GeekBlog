@@ -116,6 +116,12 @@ upload:
     secretKey: ""
     region: ""
     bucketName: ""
+  minio:
+    url: http://minio的ip:9000/
+    endpoint: http://minio的ip:9000
+    accesskey: 用户名
+    secretKey: 密码
+    bucketName: 桶的名称
 
 # 网站前台域名（邮件通知用）
 website:

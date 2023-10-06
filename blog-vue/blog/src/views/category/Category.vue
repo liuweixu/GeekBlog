@@ -50,7 +50,7 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "http://www.98qy.com/sjbz/api.php";
+      cover = "https://t.mwm.moe/fj/";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

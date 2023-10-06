@@ -36,7 +36,7 @@
 # 项目特点
 
 - 前后端分离部署，符合当下的需求，可以使用Docker部署，也可以使用宝塔面板部署。
-- 使用开源的 Editor.md，实现 markdown 的方式写博客，十分便捷，生成的文章美观简洁。
+- 使用开源的 mavon editor 富文本编辑器，实现 markdown 的方式写博客。
 - 使用策略模式构建多重上传模式（OSS、COS和本地）和两种搜索模式（MYSQL 和 ES）。
 - 引入消息队列模型，支持邮件异步通知方式。
 - 引入Canal，解决缓存一致性问题。
@@ -91,8 +91,8 @@
 
 - [ ] 添加微信公众号菜单配置功能。
 
-- [ ] 添加开源的对象存储 Minio。
-
+- [x] 添加开源的对象存储 Minio。
+- [x] 尝试引入简单的随机图片机制
 - [ ] 添加图床功能。
 
 - [x] 引入Kafka。
@@ -100,6 +100,7 @@
 - [ ] 添加实时推荐系统。
 - [ ] 添加保存搜索记录的模块（MongoDB）。
 - [ ] 修改标签页面不能正常显示的 Bug。
+- [x] 修改页面缩进的问题
 
 **欢迎大家通过issue、博客页或私聊我等方式给予建议**
 
@@ -112,8 +113,6 @@
 - 风、宇
 - [大树博客](https://gitee.com/macw/blog)
 - [blog-bamboo](https://github.com/yk-flight/blog-bamboo)
-
-- [Editor.md](https://pandao.github.io/editor.md/)
 
 - [QingFengInn-blog](https://gitee.com/lindaifeng/QingFengInn-blog)
 - [Blog](https://gitee.com/wu_shengdong/blog)

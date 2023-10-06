@@ -83,7 +83,7 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://t.mwm.moe/pc/";
+      cover = "https://moe.anosu.top/img?sort=starry";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

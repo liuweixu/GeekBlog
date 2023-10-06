@@ -1,6 +1,24 @@
-  @media (prefers-color-scheme: light) {
+  /*.markdown-body *{*/
+  /*  color: #1a181c;*/
+  /*  !*font-family: Consolas,'微软雅黑';*!*/
+  /*  font-family: Consolas, Times New Roman, '华文仿宋';*/
+  /*  font-size: 16px*/
+  /*}*/
+  .v-note-show .single-show {
+    border-radius: 10px;
+  }
+  .v-note-panel {
+    border: none !important;
+    border-radius: 10px;
+    box-shadow: 0 1px 20px -6px rgb(0 0 0 / 50%);
+  }
+  .v-show-content {
+    background-color: #fff !important;
+  }
+
+  @media (prefers-color-scheme: dark) {
     .markdown-body {
-      color-scheme: light;
+      color-scheme: dark;
       --color-prettylights-syntax-comment: #8b949e;
       --color-prettylights-syntax-constant: #79c0ff;
       --color-prettylights-syntax-entity: #d2a8ff;
@@ -34,8 +52,8 @@
       --color-fg-default: #c9d1d9;
       --color-fg-muted: #8b949e;
       --color-fg-subtle: #484f58;
-      --color-canvas-default: #0d1117;
-      --color-canvas-subtle: #161b22;
+      --color-canvas-default: #ffffff;
+      --color-canvas-subtle: #484f58;
       --color-border-default: #30363d;
       --color-border-muted: #21262d;
       --color-neutral-muted: rgba(110,118,129,0.4);
@@ -46,11 +64,9 @@
     }
   }
 
-
-
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     .markdown-body {
-      color-scheme: dark;
+      color-scheme: light;
       --color-prettylights-syntax-comment: #6e7781;
       --color-prettylights-syntax-constant: #0550ae;
       --color-prettylights-syntax-entity: #8250df;
@@ -307,6 +323,7 @@
   }
 
   .markdown-body table {
+    margin: auto;
     border-spacing: 0;
     border-collapse: collapse;
     display: block;
@@ -383,7 +400,7 @@
   }
 
   .markdown-body p {
-    font-size: 0.875em;
+    font-size: 0.95em;
     margin-top: 0;
     margin-bottom: 10px;
   }
@@ -395,23 +412,37 @@
     border-left: .25em solid var(--color-border-default);
   }
 
-  .markdown-body ul,
+  .markdown-body ul{
+    list-style-type: disc;
+    margin-left: 2px;
+  }
   .markdown-body ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 2em;
   }
-
+  .markdown-body ul ul{
+    list-style-type: circle;
+    margin-left: 20px;
+  }
   .markdown-body ol ol,
   .markdown-body ul ol {
     list-style-type: lower-roman;
   }
-
+  .markdown-body ul ul ul{
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  .markdown-body ol ul{
+    list-style-type: circle;
+    margin-left: 20px;
+  }
   .markdown-body ul ul ol,
   .markdown-body ul ol ol,
   .markdown-body ol ul ol,
   .markdown-body ol ol ol {
     list-style-type: lower-alpha;
+    margin-left: 20px;
   }
 
   .markdown-body dd {
