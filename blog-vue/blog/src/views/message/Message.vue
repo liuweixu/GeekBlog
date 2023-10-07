@@ -98,7 +98,8 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://t.mwm.moe/fj/";
+      // cover = "https://t.mwm.moe/fj/";
+      cover = "https://moe.anosu.top/img?sort=starry";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

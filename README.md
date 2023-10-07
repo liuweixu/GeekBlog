@@ -10,20 +10,14 @@
 
 本博客是参考风丶宇博客、大树博客更新而成，感谢大佬提供的页面，该博客是基于 SpringBoot 和 Vue 开发的，有多种技术栈，适合新手学习。
 
-- 风、宇博客：目前已停止开源。
-
-- 大树博客：[tree-Blog](https://gitee.com/macw/blog)
-
 
 # 在线地址
 
-**项目链接：** [https://localhost:8082](https://localhost:8082)
+**项目链接：** [GeekBlog](http://47.120.37.109/)
 
-**后台链接：** [https://localhost:8081](https://localhost:8081)
+**后台链接：** [admin](http://47.120.37.109:81/)
 
 测试账号：test@163.com，密码：123456，可登入后台查看。
-
-**在线接口文档地址：** [https://localhost:8080/doc.html](https://localhost:8080/doc.html)
 
 欢迎大家批评指正，提交PR，一起改进项目。
 
@@ -59,7 +53,7 @@
 
 3. 需要修改配置信息，即要修改 blog-springboot\src\main\resources\application-dev.yml 里面的信息，包括替换IP、添加OSS或COS的信息等。
 4. 要先启动后端，然后启动前端的admin，接着启动前端的blog（必须先安装 npm（本地安装）），前端的启动方式是 1) npm install 2) npm run serve，必须在 admin 或 blog 的路径内。
-5. 项目启动后，使用 test@163.com 登录后台。
+5. 项目启动后，使用 test@163.com （开发时的管理员账号）登录后台。
 
 ## 服务器运行
 

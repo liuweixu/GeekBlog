@@ -50,7 +50,7 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://t.mwm.moe/fj/";
+      cover = "https://imgapi.xl0408.top/index.php";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }
