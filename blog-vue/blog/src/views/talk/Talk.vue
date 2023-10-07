@@ -157,7 +157,8 @@ export default {
           cover = item.pageCover;
         }
       });
-      cover = "https://moe.anosu.top/img?sort=starry";
+      // cover = "https://moe.anosu.top/img?sort=starry";
+      cover = "https://imgapi.xl0408.top/index.php";
       return "background: url(" + cover + ") center center / cover no-repeat";
     },
     isLike() {
