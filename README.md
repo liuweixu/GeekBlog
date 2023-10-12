@@ -13,9 +13,9 @@
 
 # 在线地址
 
-**项目链接：** [GeekBlog](http://47.120.37.109/)
+**项目链接：** [GeekBlog](http://liuweixu.top/)
 
-**后台链接：** [admin](http://47.120.37.109:81/)
+**后台链接：** [admin](http://admin.liuweixu.top/)
 
 测试账号：test@163.com，密码：123456，可登入后台查看。
 

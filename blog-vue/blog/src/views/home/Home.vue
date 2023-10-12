@@ -468,7 +468,7 @@ export default {
         }
       });
       // cover = "https://t.mwm.moe/fj/";
-      cover = "https://moe.anosu.top/img?sort=starry";
+      // cover = "https://moe.anosu.top/img?sort=starry";
       return "background: url(" + cover + ") center center / cover no-repeat";
     }
   }

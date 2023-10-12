@@ -22,10 +22,10 @@
     <ForgetModel></ForgetModel>
     <!-- 绑定邮箱模态框 -->
     <EmailModel></EmailModel>
-    <!-- 音乐播放器 -->
-    <Player v-if="blogInfo.websiteConfig.isMusicPlayer == 1 && !isMobile" />
-    <!-- 聊天室 -->
-    <ChatRoom v-if="blogInfo.websiteConfig.isChatRoom == 1"></ChatRoom>
+<!--    &lt;!&ndash; 音乐播放器 &ndash;&gt;-->
+<!--    <Player v-if="blogInfo.websiteConfig.isMusicPlayer == 1 && !isMobile" />-->
+<!--    &lt;!&ndash; 聊天室 &ndash;&gt;-->
+<!--    <ChatRoom v-if="blogInfo.websiteConfig.isChatRoom == 1"></ChatRoom>-->
   </v-app>
 </template>
 
